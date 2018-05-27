@@ -8,5 +8,10 @@ class Buku extends CI_Controller {
 		$isi['data'] = $this->db->get('data_buku');
 		$this->load->view('tampilan_home',$isi);
 	}
+	public function tambah()
+	{
+		$isi['content'] = 'buku/tambah_buku';
+		$this->load->view('tampilan_home',$isi);
+	}
 }
 

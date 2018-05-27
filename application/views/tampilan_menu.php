@@ -1,5 +1,5 @@
-<ul class="sidebar-menu">
-                                <li class="active">
+<ul class="sidebar-menu" style="background-color: #442930;">
+                                <li class="active" style="background-color: #442930;">
                                     <a href="<?php echo base_url();?>index.php/home">
                                         <i class="fa fa-dashboard"></i> <span>Dashboard</span>
                                     </a>
@@ -13,19 +13,17 @@
                                 </a>
                                     <ul class="treeview-menu">
                                         <li><a href="<?php echo base_url();?>index.php/anggota"><i class="fa fa-angle-double-right"></i>Data Anggota</a></li>
-                                        <li><a href="<?php echo base_url();?>index.php/tambahanggota"><i class="fa fa-angle-double-right"></i> Tambah Anggota</a></li>
                                     </ul>
                                 </li>
 
                                 <li class="treeview">
                                 <a href="#">
                                     <i class="fa fa-book"></i>
-                                    <span>Data Buku</span>
+                                    <span>Buku</span>
                                     <i class="fa fa-angle-left pull-right"></i>
                                 </a>
                                     <ul class="treeview-menu">
                                         <li><a href="<?php echo base_url();?>index.php/buku"><i class="fa fa-angle-double-right"></i> Data Buku</a></li>
-                                        <li><a href="404.php"><i class="fa fa-angle-double-right"></i> Tambah Buku</a></li>
                                     </ul>
                                 </li>
 
@@ -54,7 +52,7 @@
                                 </li>
                                 <li>
                                     <a href="tentang.php">
-                                        <i class="ion-android-information"></i> <span>Tentang SIPEs</span>
+                                        <i class="ion-android-information"></i> <span>TentangSIPEs</span>
                                     </a>
                                 </li>
 

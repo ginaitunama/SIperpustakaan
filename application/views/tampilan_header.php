@@ -28,7 +28,7 @@
                                         <li class="divider"></li>
 
                                         <li>
-                                            <a href="../logout.php"><i class="fa fa-ban fa-fw pull-right"></i> Logout</a>
+                                            <a href="<?php echo base_url();?>index.php/login"><i class="fa fa-ban fa-fw pull-right"></i> Logout</a>
                                         </li>
                                     </ul>
                                 </li>

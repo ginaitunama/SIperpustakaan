@@ -45,9 +45,9 @@
         <?php echo $this->load->view('tampilan_header'); ?>
                 <div class="wrapper row-offcanvas row-offcanvas-left">
                     <!-- Left side column. contains the logo and sidebar -->
-                    <aside class="left-side sidebar-offcanvas">
+                    <aside class="left-side sidebar-offcanvas" style="background-color: #442930">
                         <!-- sidebar: style can be found in sidebar.less -->
-                        <section class="sidebar">
+                        <section class="sidebar" style="background-color: #442930">
                             <!-- Sidebar user panel -->
                             <div class="user-panel">
                                 <div>
