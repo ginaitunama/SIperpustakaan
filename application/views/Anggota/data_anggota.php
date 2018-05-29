@@ -16,17 +16,7 @@
                                 <div class="panel-body table-responsive">
                                     <div class="box-tools m-b-15">  
                                     </div>
-                                    <?php
-                    $query1="select * from data_anggota";
-                    
-                    if(isset($_POST['qcari'])){
-                   $qcari=$_POST['qcari'];
-                   $query1="SELECT * FROM  data_anggota 
-                   where no_induk like '%$qcari%'
-                   or nama like '%$qcari%'  ";
-                    }
-                    $tampil=mysql_query($query1) or die(mysql_error());
-                    ?>
+                                    
               <table id="example" class="table table-hover table-bordered">
                   <thead>
                       <tr>
@@ -39,22 +29,23 @@
                         <th><center>Aksi</center></th>
                       </tr>
                   </thead>
-                     <?php while($data=mysql_fetch_array($tampil))
-                    { ?>
+                     <?php foreach($data->result() as $row)
+                     ?>
                     <tbody>
                     <tr>
-                    <td><?php echo $data['npm']; ?></td>
-                    <td><?php echo $data['nama']; ?></a></td>
-                    <td><?php echo $data['jk'];?></td>
-                    <td><?php echo $data['kelas'];?></td>
-                    <td><?php echo $data['ttl'];?></td>
-                    <td><?php echo $data['alamat'];?></td>
+                    <td><?php echo $row->npm ;?></td>
+                    <td><?php echo $row->nama; ?></a></td>
+                    <td><?php echo $row->jk ;?></td>
+                    <td><?php echo $row->kelas ;?></td>
+                    <td><?php echo $row->ttl ;?></td>
+                    <td><?php echo $row->alamat ;?></td>
                     <td>
                       <center>
                         <div id="thanks">
-                          <a class="btn btn-sm btn-primary" data-placement="bottom" data-toggle="tooltip" title="Edit Anggota" href="#"><span class="glyphicon glyphicon-edit"></span></a>
-                          <a onclick="return confirm ('Yakin hapus <?php echo $data['nama'];?>.?');" class="btn btn-sm btn-danger tooltips" data-placement="bottom" data-toggle="tooltip" title="Hapus Anggota" href=""><span class="glyphicon glyphicon-trash">
-                          </a>
+                        <a href="<?php echo base_url();?>index.php/anggota/edit/<?php echo $row->npm ;?>" class="btn btn-sm btn-primary" title="Edit Anggota" data-placement="bottom" data-toggle="tooltip"><span class="glyphicon glyphicon-edit"></span></a>
+                        <a href="<?php echo base_url();?>index.php/anggota/delete/<?php echo $row->npm ;?>" onclick="return confirm ('Yakin hapus <?php echo $row->nama ;?>');" class="btn btn-sm btn-danger" title="Hapus Anggota" data-placement="bottom" data-toggle="tooltip"><span class="glyphicon glyphicon-trash"></span></a>
+                      </div>
+                          
                       </center>
                     </td>
                   </tr>

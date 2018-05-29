@@ -10,7 +10,7 @@
                       </header>
                                
                                 <div class="panel-body">
-                      <form class="form-horizontal style-form" style="margin-top: 20px;" action="" method="post" enctype="multipart/form-data" name="form1" id="form1">
+                      <form class="form-horizontal style-form" style="margin-top: 20px;" action="<?php echo base_url();?>index.php/buku/simpanbuku" method="post" enctype="multipart/form-data" name="form1" id="form1">
                          
                           <div class="form-group">
                               <label class="col-sm-2 col-sm-2 control-label">Judul Buku</label>
