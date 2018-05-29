@@ -1,15 +1,13 @@
 <section class="content">
 
                     <div class="text-left" style="margin-top: 10px;">
-                <p>
-                 <a href="<?php echo base_url();?>index.php/anggota/tambah" class="btn btn-primary btn-small">Tambah Anggota <i class="fa fa-plus"></i></a>
-               </p>
+                
                 </div>
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="panel">
                                 <header class="panel-heading">
-                                    <b><center>Data Anggota</center></b>
+                                    <b><center>Data Peminjaman</center></b>
 
                                 </header>
                               
@@ -20,12 +18,13 @@
               <table id="example" class="table table-hover table-bordered">
                   <thead>
                       <tr>
-                        <th><center>NPM </center></th>
-                        <th><center>Nama </center></th>
-                        <th><center>Jenis Kelamin </center></th>
-                        <th><center>Kelas </center></th>
-                        <th><center>Tempat Lahir </center></th>
-                        <th><center>Alamat </center></th>
+                        <th><center>Id Buku </center></th>
+                        <th><center>Judul Buku </center></th>
+                        <th><center>Nama Peminjam </center></th>
+                        <th><center>Tgl Pinjam </center></th>
+                        <th><center>Tgl Kembali </center></th>
+                        <th><center>Status </center></th>
+                        <th><center>Keterangan</center></th>
                         <th><center>Aksi</center></th>
                       </tr>
                   </thead>
@@ -33,17 +32,17 @@
                     { ?>
                     <tbody>
                     <tr>
-                    <td><?php echo $row->npm ;?></td>
-                    <td><?php echo $row->nama; ?></a></td>
-                    <td><?php echo $row->jk ;?></td>
-                    <td><?php echo $row->kelas ;?></td>
-                    <td><?php echo $row->ttl ;?></td>
-                    <td><?php echo $row->alamat ;?></td>
+                    <td><?php echo $row->id ;?></td>
+                    <td><?php echo $row->judul_buku; ?></a></td>
+                    <td><?php echo $row->nama_peminjam ;?></td>
+                    <td><?php echo $row->tgl_pinjam ;?></td>
+                    <td><?php echo $row->tgl_kembali ;?></td>
+                    <td><?php echo $row->status ;?></td>
+                    <td><?php echo $row->ket ;?></td>
                     <td>
                       <center>
                         <div id="thanks">
-                        <a href="<?php echo base_url();?>index.php/anggota/edit/<?php echo $row->npm ;?>" class="btn btn-sm btn-primary" title="Edit Anggota" data-placement="bottom" data-toggle="tooltip"><span class="glyphicon glyphicon-edit"></span></a>
-                        <a href="<?php echo base_url();?>index.php/anggota/delete/<?php echo $row->npm ;?>" onclick="return confirm ('Yakin hapus <?php echo $row->nama ;?>');" class="btn btn-sm btn-danger" title="Hapus Anggota" data-placement="bottom" data-toggle="tooltip"><span class="glyphicon glyphicon-trash"></span></a>
+                        <a href="<?php echo base_url();?>index.php/Pem_buku/edit/<?php echo $row->id ;?>" class="btn btn-sm btn-primary" title="Edit Anggota" data-placement="bottom" data-toggle="tooltip"><span class="glyphicon glyphicon-edit"></span></a>
                       </div>
                           
                       </center>
@@ -56,9 +55,6 @@
                    </tbody>
                    </table>
                    
-                  <?php $tampil=mysql_query("select * from data_anggota order by npm");
-                        $user=mysql_num_rows($tampil);
-                    ?>
            
                   
                                 </div><!-- /.box-body -->
