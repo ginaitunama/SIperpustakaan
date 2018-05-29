@@ -4,7 +4,7 @@ class Model_Anggota extends CI_Model {
 
 	public function getdata($key)
 	{
-		$this->db->where('npm', $key);
+		$this->db->where('npm',$key);
 		$hasil = $this->db->get('data_anggota');
 		return $hasil;
 
@@ -18,6 +18,11 @@ class Model_Anggota extends CI_Model {
 	public function getinsert($data)
 	{
 		$this->db->insert('data_anggota',$data);
+	}
+	public function getdelete($key)
+	{
+		$this->db->where('npm',$key);
+		$this->db->delete('data_anggota');
 	}
 
 	

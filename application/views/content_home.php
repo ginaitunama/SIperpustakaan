@@ -88,7 +88,7 @@
                                             </header>
                                                 <div class="panel-body" id="noti-box">
                                                 <?php
-                                                $tampil=mysql_query("select * from data_anggota order by id desc limit 1");
+                                                $tampil=mysql_query("select * from data_anggota order by npm desc limit 1");
                                                 while($data2=mysql_fetch_array($tampil)){
                                                 ?>
                                                     <div class="alert alert-block alert-danger">
